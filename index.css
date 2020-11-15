@@ -14,13 +14,14 @@ body {
 	gap: 1rem;
 	z-index: 1;
 	position: relative;
+	font-family: sans-serif;
 }
 
 #leftSide,
 #rightSide {
 	background-color: cornflowerblue;
-	width: 10vw;
-	height: 50vh;
+	width: 10%;
+	height: 50%;
 	z-index: 10;
 	border-radius: 10px;
 }
@@ -52,8 +53,8 @@ body {
 
 #bellows {
 	background-color: lightcoral;
-	height: 35rem;
-	width: 20vw;
+	height: 45vh;
+	width: 22vw;
 	position: absolute;
 	top: 12%;
 	left: 38vw;
@@ -64,7 +65,7 @@ body {
 
 .bellowLines {
 	height: 100%;
-	width: 5px;
+	width: 2%;
 	background-color: black;
 	border-left: 9px solid black;
 }
@@ -84,8 +85,8 @@ body {
 
 .pianoKeys {
 	background-color: black;
-	width: 6vw;
-	height: 20px;
+	width: 70%;
+	height: 8%;
 	margin: 5px 0;
 	align-self: flex-end;
 }
@@ -98,6 +99,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	color: white;
 }
 
 .buttons {
@@ -107,6 +109,11 @@ body {
 	opacity: .8;
 	border-radius: 50%;
 	align-self: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-size: 1.5rem;
 }
 
 .buttons:hover {
@@ -132,7 +139,6 @@ body {
 @keyframes moveBass {
 	to {
 		transform: translateX(100px) translateY(3px) rotate(10deg);
-		height: 42rem;
 	}
 }
 

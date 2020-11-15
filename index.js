@@ -14,6 +14,10 @@ for (button of buttons) {
 	});
 }
 
+buttons.forEach((button) => {
+	button.addEventListener('click', () => playNote(button));
+});
+
 let isDown;
 let startX;
 let startY;
@@ -25,13 +29,11 @@ bass.addEventListener('mousedown', function(e) {
 	bassPosition = bass.getBoundingClientRect();
 	startX = e.clientX;
 	startY = e.clientY;
-	//console.log(bassPosition, startX, startY);
 });
 
 bass.addEventListener('mouseup', function(e) {
 	bass.classList.remove('active');
 	isDown = false;
-	//console.log(bass);
 });
 
 bass.addEventListener('mouseLeave', function(e) {
@@ -48,3 +50,11 @@ bass.addEventListener('mousemove', function(e) {
 	bass.style.left = bassPosition.left - deltaX + 'px';
 	bass.style.top = bassPosition.top - deltaY + 'px';
 });
+
+function playNote(note) {
+	const noteAudio = document.getElementById(note.dataset.note);
+	console.log(noteAudio);
+	noteAudio.currentTime = 0;
+	console.log(event.target.dataset);
+	noteAudio.play();
+}
