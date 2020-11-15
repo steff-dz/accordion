@@ -52,10 +52,10 @@ body {
 
 #bellows {
 	background-color: lightcoral;
-	height: 37rem;
+	height: 35rem;
 	width: 20vw;
 	position: absolute;
-	top: 10vh;
+	top: 12%;
 	left: 38vw;
 	display: flex;
 	gap: 5px;
